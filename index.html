@@ -1,5 +1,3 @@
-PHOTO_B64=$(cat /tmp/photo_b64.txt | tr -d '\n')
-cat > /mnt/user-data/outputs/index.html << HTMLEOF
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -480,6 +478,22 @@ cat > /mnt/user-data/outputs/index.html << HTMLEOF
         </div>
       </div>
 
+
+      <div class="proj-card">
+        <div class="proj-badge">AI Agent · Full Stack · Live Demo</div>
+        <div class="proj-title">AgentForge — AI Agent Builder</div>
+        <div class="proj-desc">
+          An AI-assisted agent-building platform with planning workflows and reviewable generated artifacts. Includes a web interface, backend API, and Gemini-powered capabilities when the server-side API key is configured.
+        </div>
+        <div class="proj-tech">
+          <span class="proj-tag">React</span><span class="proj-tag">Python</span><span class="proj-tag">REST API</span><span class="proj-tag">Gemini</span><span class="proj-tag">Vercel</span><span class="proj-tag">Render</span>
+        </div>
+        <div class="hero-btns">
+          <a class="btn-primary" href="https://agentforge-inky.vercel.app" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
+          <a class="btn-outline" href="https://github.com/plDilipkumar/Agent-force-" target="_blank" rel="noopener noreferrer">Source Code ↗</a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -607,9 +621,3 @@ cat > /mnt/user-data/outputs/index.html << HTMLEOF
 
 </body>
 </html>
-HTMLEOF
-
-
-
-
-
