@@ -245,6 +245,40 @@
     .about-grid, .contact-grid { grid-template-columns: 1fr; }
     .nav-links { display: none; }
   }
+
+  /* ── PRINTABLE RESUME ── */
+  .resume-sheet { background: #ffffff; color: #172033; }
+  .resume-sheet .resume-inner { max-width: 920px; }
+  .resume-sheet .resume-toolbar { display:flex; justify-content:space-between; align-items:center; gap:1rem; margin-bottom:1rem; }
+  .resume-sheet .resume-toolbar button { border:1px solid #9bb6dc; background:#f8fafc; color:#1d4ed8; border-radius:8px; padding:.6rem 1rem; font-weight:700; cursor:pointer; }
+  .resume-sheet .resume-header { text-align:center; border-bottom:2px solid #2857a4; padding-bottom:1rem; margin-bottom:1.2rem; }
+  .resume-sheet .resume-header h2 { color:#172033; margin-bottom:.2rem; font-size:1.8rem; }
+  .resume-sheet .resume-subtitle { color:#2857a4; font-weight:700; margin-bottom:.5rem; }
+  .resume-sheet .resume-contact { color:#536078; font-size:.86rem; display:flex; justify-content:center; flex-wrap:wrap; gap:.3rem 1rem; }
+  .resume-sheet .resume-contact a { color:#2857a4; }
+  .resume-sheet .resume-block { margin-bottom:1.15rem; }
+  .resume-sheet .resume-block h3 { font-size:1rem; color:#2857a4; text-transform:uppercase; letter-spacing:1px; border-bottom:1px solid #b8c8df; padding-bottom:.3rem; margin-bottom:.5rem; }
+  .resume-sheet p,.resume-sheet li { color:#334155; font-size:.9rem; line-height:1.65; }
+  .resume-sheet ul { padding-left:1.2rem; }
+  .resume-sheet .resume-role { display:flex; justify-content:space-between; gap:1rem; font-weight:700; color:#172033; }
+  .resume-sheet .resume-org { color:#536078; font-style:italic; margin:.15rem 0 .35rem; }
+  .resume-sheet .resume-project { margin-bottom:.65rem; }
+  .resume-sheet .resume-project strong { color:#172033; }
+  .resume-sheet .resume-footnote { font-size:.78rem; color:#64748b; border-top:1px solid #b8c8df; padding-top:.5rem; margin-top:1rem; }
+  @media print {
+    body * { visibility:hidden !important; }
+    #resume, #resume * { visibility:visible !important; }
+    #resume { position:absolute; left:0; top:0; width:100%; margin:0 !important; padding:0 !important; background:#fff !important; color:#172033 !important; }
+    #resume .resume-inner { max-width:none; padding:0 !important; }
+    #resume .resume-toolbar { display:none !important; }
+    #resume .resume-header h2 { color:#172033 !important; font-size:22pt; }
+    #resume .resume-block h3 { color:#2857a4 !important; font-size:10pt; }
+    #resume p, #resume li, #resume .resume-role, #resume .resume-project strong { color:#172033 !important; font-size:9pt; }
+    #resume .resume-contact, #resume .resume-org, #resume .resume-footnote { color:#475569 !important; }
+    #resume .section-label, #resume .section-title, #resume .divider { display:none !important; }
+    @page { size:A4; margin:12mm; }
+  }
+
 </style>
 </head>
 <body>
@@ -259,7 +293,7 @@
     <li><a href="#team">How I Work</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#repositories">Repositories</a></li>
-    <li><a href="resume.html">Resume</a></li>
+    <li><a href="#resume">Resume</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -282,7 +316,7 @@
         <a href="#projects" class="btn-outline">View Projects</a>
         <a href="https://linkedin.com/in/dilip-kumar-pl-a5b259257" class="btn-outline" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
         <a href="https://github.com/plDilipkumar" class="btn-outline" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-        <a href="resume.html" class="btn-primary">Resume / Save as PDF ↗</a>
+        <a href="#resume" class="btn-primary">Resume / Save as PDF ↗</a>
       </div>
     </div>
     <div class="hero-photo-wrap">
@@ -593,6 +627,49 @@
         <p class="proj-desc">Completed soft-skills learning through NPTEL and continues to strengthen engineering fundamentals through hands-on projects.</p>
       </div>
     </div>
+  </div>
+</section>
+
+
+<!-- RESUME -->
+<section class="resume-sheet" id="resume">
+  <div class="section-inner resume-inner">
+    <div class="resume-toolbar"><p class="section-label">Recruiter-ready summary</p><button type="button" onclick="window.print()">Print / Save as PDF</button></div>
+    <div class="resume-header">
+      <h2>Dilip Kumar P. L.</h2>
+      <p class="resume-subtitle">Computer Science Engineering Graduate · Software / Java / Full-Stack Development</p>
+      <div class="resume-contact"><span>Chennai, Tamil Nadu</span><span>+91 6380539416</span><a href="mailto:pldilipkumar09@gmail.com">pldilipkumar09@gmail.com</a><a href="https://linkedin.com/in/dilip-kumar-pl-a5b259257">LinkedIn</a><a href="https://github.com/plDilipkumar">GitHub</a></div>
+    </div>
+    <div class="resume-block"><h3>Professional Summary</h3><p>Computer Science Engineering graduate (CGPA 8.29) with hands-on project experience in Java, Spring Boot, React, REST APIs, SQL, and mainframe technologies. Completed an in-person Mainframe Technology internship at Cognizant and built full-stack and AI-assisted engineering projects. Values collaboration, clear communication, structured debugging, and validating work before claiming completion.</p></div>
+    <div class="resume-block"><h3>Technical Skills</h3>
+      <p><strong>Languages:</strong> Java, Python, JavaScript, SQL, COBOL</p>
+      <p><strong>Backend & APIs:</strong> Spring Boot, Spring MVC, Spring Security, REST APIs, JWT, JSON, FastAPI</p>
+      <p><strong>Frontend & Data:</strong> React, HTML5, CSS3, MySQL, DB2, VSAM</p>
+      <p><strong>Mainframe & Tools:</strong> JCL, GDG, TSO/ISPF, z/OS, Git, GitHub, Maven, Postman, IntelliJ, Vercel, Render</p>
+    </div>
+    <div class="resume-block"><h3>Experience & Internships</h3>
+      <div class="resume-role"><span>Mainframe Technology Intern · Cognizant Technology Solutions</span><span>Feb–Mar 2026</span></div>
+      <p class="resume-org">Chennai, Tamil Nadu · In person</p>
+      <ul><li>Trained in COBOL, JCL, DB2, batch processing, debugging, job monitoring, and enterprise application support.</li><li>Built a solo Health Insurance Processing System using COBOL, DB2, and JCL; collaborated on a team insurance application using VSAM KSDS and GDG.</li><li>Gained exposure to incident management, production workflows, and root-cause analysis.</li></ul>
+      <div class="resume-role"><span>Frontend Development Intern · IBM SkillsBuild / AICTE</span><span>Virtual</span></div>
+      <ul><li>Developed responsive interfaces with HTML, CSS, and JavaScript; practised frontend debugging through guided learning.</li></ul>
+      <div class="resume-role"><span>Advanced Software Engineering Virtual Experience · Walmart Forage</span><span>Virtual</span></div>
+      <ul><li>Practised debugging, code-quality improvements, software engineering fundamentals, and Agile scenario-based problem-solving.</li></ul>
+    </div>
+    <div class="resume-block"><h3>Selected Projects</h3>
+      <div class="resume-project"><p><strong>AgentForge — AI Engineering Workspace</strong> · React, TypeScript, FastAPI, Gemini</p><ul><li>Turns task briefs into structured specifications, prioritised tasks, architecture decisions, risks, and verification plans.</li><li>Added bounded, reviewable Python source/test artifact generation with regression tests and explicit “not executed” status; generated code is not executed by the web API.</li><li>Demo: <a href="https://agentforge-inky.vercel.app">agentforge-inky.vercel.app</a> · <a href="https://github.com/plDilipkumar/Agent-force-">Source</a></li></ul></div>
+      <div class="resume-project"><p><strong>InvoiceX — Invoice & Client Management</strong> · Java, Spring Boot, React, JWT, SQL</p><ul><li>Developing user-scoped invoice/client APIs, invoice workflows, PDF generation, and optional email functionality; database/deployment restoration remains in progress.</li><li>Frontend: <a href="https://invoicex-frontend.vercel.app">Vercel</a> · Backend: <a href="https://invoicex-i3y4.onrender.com">Render</a> · <a href="https://github.com/plDilipkumar/invoicex">Backend source</a> / <a href="https://github.com/plDilipkumar/invoicex-frontend">Frontend source</a></li></ul></div>
+      <div class="resume-project"><p><strong>Child Health Insurance Processing System</strong> · COBOL, DB2, JCL, VSAM, GDG</p><ul><li>Mainframe workflow for customer records, policy lifecycle, premium payments, and maturity processing using batch jobs and file-based data management.</li></ul></div>
+      <div class="resume-project"><p><strong>DDoS Attack Detection System</strong> · Python, Machine Learning</p><ul><li>Explored an ML-based DDoS detection project with AI-assisted coding, testing, validation, and debugging.</li></ul></div>
+    </div>
+    <div class="resume-block"><h3>Education</h3>
+      <div class="resume-role"><span>B.E. Computer Science and Engineering · RMD Engineering College / Anna University</span><span>2022–2026</span></div><p>CGPA 8.29</p>
+      <p><strong>HSC:</strong> JGVV Matric Higher Secondary School · Tamil Nadu State Board · 94.17% (2022)</p>
+      <p><strong>SSLC:</strong> JGVV Matric Higher Secondary School · Tamil Nadu State Board · 95.8% (2020)</p>
+    </div>
+    <div class="resume-block"><h3>Certifications</h3><p>NPTEL — Programming in Java (IIT Kharagpur); NPTEL — Soft Skills (IIT Kharagpur); Infosys Springboard — SQL & Relational Databases; Infosys Springboard — Web Development Fundamentals; PwC ERP Launchpad Program; Walmart Global Tech — Software Engineering Virtual Experience (Forage).</p></div>
+    <div class="resume-block"><h3>Collaboration & Communication</h3><p>Contributed to a team-based insurance application during Cognizant training. Focuses on clear status updates, explaining technical decisions accessibly, documenting assumptions, and validating changes before release.</p></div>
+    <p class="resume-footnote">InvoiceX database-backed deployment is currently being restored. Project descriptions distinguish in-progress work from verified deployment status.</p>
   </div>
 </section>
 
