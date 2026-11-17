@@ -34,7 +34,7 @@ p{margin:4px 0}ul{margin:4px 0 0 18px;padding:0}li{margin:2px 0}
 </style>
 </head>
 <body>
-<div class="toolbar"><a href="index.html">← Back to Portfolio</a><button onclick="window.print()">Print / Save as PDF</button></div>
+<div class="toolbar"><a href="index.html">← Back to Portfolio</a><button onclick="window.print()">Download / Save as PDF</button></div>
 <main class="resume">
 <header>
 <h1>Dilip Kumar P. L.</h1>
@@ -144,5 +144,13 @@ p{margin:4px 0}ul{margin:4px 0 0 18px;padding:0}li{margin:2px 0}
 </section>
 <div class="footer">Portfolio and project links above are provided for review. InvoiceX's database-backed deployment is currently being restored; project descriptions distinguish in-progress work from verified deployment status.</div>
 </main>
+<script>
+  // Only open the print dialog when the visitor explicitly chooses "Save as PDF".
+  if (new URLSearchParams(window.location.search).get('download') === '1') {
+    window.addEventListener('load', function () {
+      window.setTimeout(function () { window.print(); }, 250);
+    });
+  }
+</script>
 </body>
 </html>
