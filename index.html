@@ -229,6 +229,27 @@
   .contact-note { color: var(--gray); font-size: 0.95rem; line-height: 1.8; }
   .contact-note strong { color: var(--white); }
 
+
+  /* ── RESUME ACTIONS ── */
+  .resume-panel {
+    display:flex; align-items:center; justify-content:space-between; gap:2rem;
+    padding:2.2rem; border-radius:18px;
+    background:linear-gradient(125deg, rgba(30,45,74,.98), rgba(22,34,64,.98));
+    border:1px solid rgba(59,130,246,.28);
+    box-shadow:0 18px 50px rgba(0,0,0,.18);
+  }
+  .resume-panel-copy { max-width:620px; }
+  .resume-panel-copy h3 { color:var(--white); font-size:1.25rem; margin-bottom:.55rem; }
+  .resume-panel-copy p { color:var(--gray); font-size:.92rem; line-height:1.8; }
+  .resume-panel-actions { display:flex; flex-wrap:wrap; gap:.8rem; flex-shrink:0; }
+  .resume-panel-actions a { display:inline-flex; align-items:center; justify-content:center; gap:.5rem; }
+  .resume-panel .resume-hint { display:block; color:var(--gray); font-size:.76rem; margin-top:.8rem; }
+  @media (max-width:768px) {
+    .resume-panel { flex-direction:column; align-items:flex-start; padding:1.5rem; }
+    .resume-panel-actions { width:100%; }
+    .resume-panel-actions a { flex:1 1 100%; text-align:center; }
+  }
+
   /* ── FOOTER ── */
   footer {
     background: #080f1e; text-align: center;
@@ -262,7 +283,7 @@
     <li><a href="#team">How I Work</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#repositories">Repositories</a></li>
-    <li><a href="resume.html">Resume</a></li>
+    <li><a href="#resume">Resume</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -285,7 +306,7 @@
         <a href="#projects" class="btn-outline">View Projects</a>
         <a href="https://linkedin.com/in/dilip-kumar-pl-a5b259257" class="btn-outline" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
         <a href="https://github.com/plDilipkumar" class="btn-outline" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-        <a href="resume.html" class="btn-primary">View Resume / Save PDF ↗</a>
+        <a href="#resume" class="btn-primary">Resume Options ↓</a>
       </div>
     </div>
     <div class="hero-photo-wrap">
@@ -610,7 +631,25 @@
 </section>
 
 
-<!-- RESUME -->
+<!-- RESUME ACTIONS -->
+<section class="about-bg" id="resume">
+  <div class="section-inner">
+    <p class="section-label">Resume</p>
+    <h2 class="section-title">Want to know more?</h2>
+    <div class="divider"></div>
+    <div class="resume-panel">
+      <div class="resume-panel-copy">
+        <h3>View or download my resume</h3>
+        <p>Explore my experience, technical skills, education, and selected projects in a recruiter-friendly format. The resume stays separate from this portfolio until you choose an option.</p>
+        <span class="resume-hint">Choose an action to open the resume or save a PDF copy.</span>
+      </div>
+      <div class="resume-panel-actions">
+        <a href="resume.html" class="btn-primary">View Resume ↗</a>
+        <a href="resume.html?download=1" class="btn-outline">↓ Save as PDF</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <!-- EDUCATION -->
